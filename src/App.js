@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Todos from './components/Todos';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+
 
 class App extends React.Component {
   state = {
@@ -37,9 +39,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Todos todos={this.state.todos} markComplete={this.markComplete}/>  
+        <AmplifySignOut />
       </div>
     );
   }
 }
 
-export default App;
+export default withAuthenticator(App);
