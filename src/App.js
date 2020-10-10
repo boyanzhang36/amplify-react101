@@ -13,7 +13,7 @@ class App extends React.Component {
       {
         id: 2, 
         title: 'Feed KK',
-        completed: true
+        completed: false
       },
       {
         id: 3, 
